@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Apartman Orijent </title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<div class="container">
+<div class="menu">
+<img src="orijent1.png" class="logo">
+<ul>
+<li><a href="apartman.html"> Početna stranica </a></li>
+<li><a href="sadrzaj.html"> Sadržaj </a></li>
+<li><a href="turizam.html"> Turistička ponuda </a></li>
+<li><a href="Cijene.html"> Cijene </a></li>
+<li><a href="kontakt.html"> Kontakt </a></li>
+</ul>
+</div>
+
+<div class="row">
+<div class="column">
+<div class="text">
+<h3> Dobro došli </h3>
+<h1> Vaša udobnost, naš je posao </h1>
+
+</div>
+</div>
+<div class="column">
+<div class="gallery">
+<img src="pic1.jpg" id="slika">
+
+<ul>
+<li class="btn"> 1 </li>
+<li class="btn"> 2 </li>
+<li class="btn"> 3 </li>
+<li class="btn"> 4 </li>
+
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+var btn = document.getElementsByClassName("btn");
+var slika = document.getElementById("slika");
+
+var images = new Array(
+"pic1.jpg",
+"4.jpg",
+"pic3.jpg",
+"pic4.jpg"
+);
+
+for (let i = 0; i < btn.length; i++){
+btn[i].onclick = function(){
+slika.src = images[i];
+
+let current = document.getElementsByClassName("active");
+current[0].className = current[0].className.replace("active","");
+this.className += "active";
+};
+}
+
+
+</script>
+</body>
+</html>

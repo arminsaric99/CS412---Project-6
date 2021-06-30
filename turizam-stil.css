@@ -1,0 +1,175 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	
+}
+
+.menu {
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo{
+	width: 119px;
+	cursor: pointer;
+}
+
+.menu ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.menu ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.menu ul li::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #7FFFD4;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.4s;
+}
+
+.menu ul li:hover::after{
+	width: 100%;
+}
+
+.container{
+	
+	
+	width: 100%;
+	min-height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(background.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+    overflow: hidden;
+	
+}
+
+.slides{
+	width: 500%;
+	height: 500px;
+	display: flex;
+}
+
+.slides input{
+	display: none;
+}
+
+.slide{
+	width: 20%;
+	transition: 2s;
+}
+
+.slide img{
+	width: 800px;
+	height: 500px;
+    margin-left: 280px;
+}
+
+.manual{
+	position: absolute;
+	width: 800px;
+	margin-top: -40px;
+	display: flex;
+	justify-content: center;
+}
+
+.manual-button{
+	border: 2px solid #40D3DC;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 2s;
+}
+
+.manual-button:not(:last-child){
+	margin-right: 40px;
+}
+
+.manual-button:hover{
+	background: #40D3DC;
+}
+
+#rad1:checked ~ .first{
+	margin-left: 0;
+}
+
+#rad2:checked ~ .first{
+	margin-left: -20%;
+}
+
+#rad3:checked ~ .first{
+	margin-left: -40%;
+}
+
+#rad4:checked ~ .first{
+	margin-left: -60%;
+}
+
+#rad5:checked ~ .first{
+	margin-left: -80%;
+}
+
+.auto{
+	position: absolute;
+	display: flex;
+	width: 800px;
+	justify-content: center;
+	margin-top: 460px;
+}
+
+.auto div{
+	border: 2px solid #40D3DC;
+	padding: 5px;
+	border-radius: 10px;
+	transition: 1s;
+}
+
+.auto div:not(:last-child){
+	margin-right: 40px;
+}
+
+#rad1:checked ~ .auto .auto-button1{
+	background: #40D3DC;
+}
+
+#rad2:checked ~ .auto .auto-button2{
+	background: #40D3DC;
+}
+
+#rad3:checked ~ .auto .auto-button3{
+	background: #40D3DC;
+}
+
+#rad4:checked ~ .auto .auto-button4{
+	background: #40D3DC;
+}
+
+#rad5:checked ~ .auto .auto-button5{
+	background: #40D3DC;
+}

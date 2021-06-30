@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Sadržaj </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sadrzaj-stil.css">
+</head>
+<body>
+<div class="container">
+<div class="menu">
+<img src="orijent1.png" class="logo">
+<ul>
+<li><a href="apartman.html"> Početna stranica </a></li>
+<li><a href="sadrzaj.html"> Sadržaj </a></li>
+<li><a href="turizam.html"> Turistička ponuda </a></li>
+<li><a href="Cijene.html"> Cijene </a></li>
+<li><a href="kontakt.html"> Kontakt </a></li>
+</ul>
+</div>
+<h2> Sadržaj </h2>
+<p>
+Apartman i sobe za odmor.<br>
+Naš apartman je Nacionalni spomenik BiH.<br> Kuća na Luci je vakuf Hatidže Hajdarbegović.<br> Apartman se nalazi u mahali Luka u Stocu.<br>
+U našem sadržaju posjedujemo tri sobe <br>i jedan veliki apartman.<br>
+U galeriji možete vidjeti izgled naših soba.</p>
+<div class="proizvod">
+<div class="proizvod-small-img">
+<img src="pic1.jpg" onclick="myFunction(this)">
+<img src="3.jpg" onclick="myFunction(this)">
+<img src="1.jpg" onclick="myFunction(this)">
+<img src="5.jpg" onclick="myFunction(this)">
+<img src="background.jpg" onclick="myFunction(this)">
+
+</div>
+<div class="img-container">
+<img id="imageBox" src="pic1.jpg">
+
+</div>
+</div>
+</div>
+
+<script>
+function myFunction(smallImg){
+var fullImg = document.getElementById("imageBox");
+fullImg.src = smallImg.src;
+}
+
+</script>
+</body>
+</html>
